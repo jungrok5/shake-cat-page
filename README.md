@@ -26,15 +26,23 @@
 
 - 실험실 주소: **https://jungrok5.github.io/shake-cat-page/lab.html**
 
+## ⚗️ 흔들흔들 물약 공방 (게임)
+
+손님 주문에 맞춰 재료를 고르고 폰을 흔들어 물약을 제조하는 게임(`game.html`)도 있어요.
+
+- 게임 주소: **https://jungrok5.github.io/shake-cat-page/game.html**
+
 ## 📂 구성
 
 | 파일 | 설명 |
 | --- | --- |
 | `index.html` | 카운터 페이지 |
 | `lab.html` | 흔들기 패턴 실험실 |
+| `game.html` | 흔들흔들 물약 공방 (게임) |
 | `style.css` | 스타일 / 애니메이션 (공용) |
 | `shake.js` | 흔들기 감지 & 카운터 로직 |
 | `lab.js` | 패턴 분석 로직 |
+| `game.js` | 물약 공방 게임 로직 |
 | `.github/workflows/deploy.yml` | GitHub Pages 자동 배포 워크플로 |
 
 소스 코드는 [`shake-cat`](https://github.com/jungrok5/shake-cat) 저장소에서 관리됩니다.

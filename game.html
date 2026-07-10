@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#1b1035" />
+  <title>흔들흔들 물약 공방 🧪🐱</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚗️</text></svg>" />
+</head>
+<body>
+  <main class="app game">
+    <!-- 상단 상태바 -->
+    <header class="game__bar" id="hud" hidden>
+      <span class="game__hud">🗓️ <b id="hudDay">1</b>일차</span>
+      <span class="game__hud">🙍 <b id="hudCustomer">1</b>/<span id="hudTotal">5</span></span>
+      <span class="game__hud">🪙 <b id="hudGold">0</b></span>
+      <span class="game__hud">⭐ <b id="hudRep">0</b></span>
+    </header>
+
+    <!-- 타이틀 -->
+    <section class="screen" id="screenTitle">
+      <h1 class="app__title">흔들흔들<br />물약 공방</h1>
+      <div class="title-emoji">⚗️🐱✨</div>
+      <p class="app__subtitle">폰을 흔들어 마법 물약을 제조하세요!<br />손님 주문에 맞는 재료와 <b>흔드는 방식</b>이 핵심이에요.</p>
+      <button class="btn btn--primary" id="startBtn">센서 켜고 시작</button>
+      <p class="status" id="status">iOS는 시작 시 모션 센서 권한을 허용해 주세요.</p>
+      <a class="lab-link" href="index.html">🐱 카운터 · 🧪 실험실로</a>
+    </section>
+
+    <!-- 손님 주문 -->
+    <section class="screen" id="screenOrder" hidden>
+      <div class="customer">
+        <div class="customer__face" id="custFace">🧙</div>
+        <div class="customer__name" id="custName">마법사</div>
+      </div>
+      <div class="speech" id="orderText">주문 내용</div>
+      <p class="hint" id="orderHint"></p>
+      <button class="btn btn--primary" id="toIngredientsBtn">재료 고르기 →</button>
+    </section>
+
+    <!-- 재료 선택 -->
+    <section class="screen" id="screenIngredients" hidden>
+      <h2 class="section-title">재료를 골라 셰이커에 넣으세요</h2>
+      <div class="speech speech--sm" id="orderTextSm">주문</div>
+      <div class="ing-grid" id="ingGrid"></div>
+      <div class="shaker-picked" id="pickedList"><span class="picked-empty">아직 담은 재료가 없어요</span></div>
+      <div class="controls">
+        <button class="btn btn--ghost btn--sm" id="clearIngBtn">비우기</button>
+        <button class="btn btn--primary" id="toBrewBtn">제조하기 →</button>
+      </div>
+    </section>
+
+    <!-- 제조(흔들기) -->
+    <section class="screen" id="screenBrew" hidden>
+      <div class="brew-hint" id="brewHint">천천히 크게 흔드세요 🐢</div>
+      <div class="shaker" id="shaker">
+        <div class="shaker__liquid" id="liquid"></div>
+        <div class="shaker__glass">🍶</div>
+        <div class="shaker__bubbles" id="bubbles"></div>
+      </div>
+      <div class="brew-meter">
+        <div class="brew-meter__fill" id="brewFill"></div>
+      </div>
+      <button class="btn btn--primary" id="brewStartBtn">흔들기 시작</button>
+      <p class="status" id="brewStatus">버튼을 누르고 흔드세요!</p>
+    </section>
+
+    <!-- 결과 -->
+    <section class="screen" id="screenResult" hidden>
+      <div class="result-grade" id="resultGrade">완벽한 제조!</div>
+      <div class="result-emoji" id="resultEmoji">✨</div>
+      <div class="speech" id="resultText">손님 반응</div>
+      <div class="result-score" id="resultScore"></div>
+      <button class="btn btn--primary" id="nextBtn">다음 손님 →</button>
+    </section>
+
+    <!-- 하루 결산 -->
+    <section class="screen" id="screenSummary" hidden>
+      <h1 class="app__title">영업 종료 🌙</h1>
+      <div class="summary-box" id="summaryBox"></div>
+      <button class="btn btn--primary" id="againBtn">다시 영업하기</button>
+      <a class="lab-link" href="index.html">🐱 카운터 · 🧪 실험실로</a>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
