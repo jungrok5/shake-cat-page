@@ -18,13 +18,23 @@
 2. **Build and deployment → Source** 를 `GitHub Actions` 로 설정합니다.
 3. `main` 브랜치에 푸시하면 `.github/workflows/deploy.yml` 워크플로가 자동으로 사이트를 배포합니다.
 
+## 🧪 흔들기 패턴 실험실
+
+카운터(`index.html`) 외에 **흔드는 방식**을 실시간 분석하는 실험실 페이지(`lab.html`)가 있어요.
+약하게/강하게, 빠르게/천천히, 일정한 박자, 강하게 3번 뒤 멈추기, 정확히 멈추기(타이밍)까지
+5가지 패턴을 모바일 브라우저에서 감지·테스트할 수 있습니다.
+
+- 실험실 주소: **https://jungrok5.github.io/shake-cat-page/lab.html**
+
 ## 📂 구성
 
 | 파일 | 설명 |
 | --- | --- |
-| `index.html` | 페이지 구조 |
-| `style.css` | 스타일 / 애니메이션 |
+| `index.html` | 카운터 페이지 |
+| `lab.html` | 흔들기 패턴 실험실 |
+| `style.css` | 스타일 / 애니메이션 (공용) |
 | `shake.js` | 흔들기 감지 & 카운터 로직 |
+| `lab.js` | 패턴 분석 로직 |
 | `.github/workflows/deploy.yml` | GitHub Pages 자동 배포 워크플로 |
 
 소스 코드는 [`shake-cat`](https://github.com/jungrok5/shake-cat) 저장소에서 관리됩니다.
